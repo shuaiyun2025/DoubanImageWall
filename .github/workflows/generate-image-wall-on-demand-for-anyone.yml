@@ -34,7 +34,7 @@ jobs:
         run: python image_wall.py -i=${{ github.event.inputs.doubanId }} -c=18 -r=8 -o=8 -rd=True
 
       - name: execute py script to generate album cover wall
-        run: python image_wall.py -i=${{ github.event.inputs.doubanId }} -m='book' -c=10 -r=8 -o=8 -rd=True -rt=4
+        run: python image_wall.py -i=${{ github.event.inputs.doubanId }} -m='book' -c=10 -r=8 -o=8 -rd=True -rt=5
         
       - name: commit caches
         run: |
@@ -55,6 +55,6 @@ jobs:
           name: ${{ github.event.inputs.doubanId }}
           retention-days: 1
           path: |
-            output/${{ github.event.inputs.doubanId }}_movie.jpg
+            output/${{ github.event.inputs.doubanId }}_book.jpg
             output/${{ github.event.inputs.doubanId }}_music.jpg
           overwrite: true
