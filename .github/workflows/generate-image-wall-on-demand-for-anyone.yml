@@ -30,11 +30,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: execute py script to generate book poster wall
+      - name: execute py script to generate movie poster wall
         run: python image_wall.py -i=${{ github.event.inputs.doubanId }} -c=18 -r=8 -o=8 -rd=True
 
       - name: execute py script to generate album cover wall
-        run: python image_wall.py -i=${{ github.event.inputs.doubanId }} -m='book' -c=10 -r=8 -o=8 -rd=True -rt=5
+        run: python image_wall.py -i=${{ github.event.inputs.doubanId }} -m='movie' -c=9 -r=16 -o=0 -rd=True -rt=5
         
       - name: commit caches
         run: |
